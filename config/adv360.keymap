@@ -28,12 +28,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75>;
-            retro-tap;
-            require-prior-idle-ms = <30>;
+            require-prior-idle-ms = <10>;
         };
 
         thright: thright {
@@ -42,12 +41,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64>;
-            require-prior-idle-ms = <30>;
-            retro-tap;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64 13 27 45 59 75 12 26 44 58 74>;
+            require-prior-idle-ms = <10>;
         };
     };
 
