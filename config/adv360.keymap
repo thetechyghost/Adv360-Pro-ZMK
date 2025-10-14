@@ -28,9 +28,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <120>;
+            flavor = "tap-unless-interrupted";
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75>;
         };
 
@@ -40,19 +40,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 46 47 48 49 50 51 60 61 62 63 64>;
-        };
-    };
-
-    macros {
-        selectToStart: selectToStart {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(HOME)>;
-            label = "SELECTTOSTART";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <120>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64>;
         };
     };
 
@@ -62,11 +53,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2                  &kp N3                &kp N4                &kp N5              &tog 1                                                            &mo 3        &kp N6               &kp N7                  &kp N8                &kp N9                    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W                   &kp E                 &kp R                 &kp T               &none                                                             &none        &kp Y                &kp U                   &kp I                 &kp O                     &kp P     &kp BSLH
-&kp ESC    &kp A      &thleft LEFT_CONTROL S  &thleft LEFT_SHIFT D  &thleft LEFT_SHIFT F  &thleft LEFT_ALT G  &none     &kp LEFT_GUI  &kp LALT      &kp RIGHT_ALT    &kp RCTRL  &none        &thleft RIGHT_ALT H  &thright RIGHT_SHIFT J  &thright RIGHT_GUI K  &thright RIGHT_CONTROL L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X                   &kp C                 &kp V                 &kp B                                       &kp HOME      &kp PG_UP                                &kp N                &kp M                   &kp COMMA             &kp DOT                   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS                &kp LEFT              &kp RIGHT                                 &kp BSPC  &kp DEL       &kp END       &lt 2 PAGE_DOWN  &kp ENTER  &lt 5 SPACE                       &kp UP                  &kp DOWN              &kp LBKT                  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2                  &kp N3          &kp N4                &kp N5              &tog 1                                                             &mo 3        &kp N6               &kp N7                  &kp N8                &kp N9                    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W                   &kp E           &kp R                 &kp T               &none                                                              &none        &kp Y                &kp U                   &kp I                 &kp O                     &kp P     &kp BSLH
+&kp ESC    &kp A      &thleft LEFT_CONTROL S  &thleft LGUI D  &thleft LEFT_SHIFT F  &thleft LEFT_ALT G  &none     &kp LEFT_GUI  &kp LALT       &kp RIGHT_ALT    &kp RCTRL  &none        &thleft RIGHT_ALT H  &thright RIGHT_SHIFT J  &thright RIGHT_GUI K  &thright RIGHT_CONTROL L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X                   &kp C           &kp V                 &kp B                                       &kp HOME       &kp PG_UP                                &kp N                &kp M                   &kp COMMA             &kp DOT                   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS                &kp LEFT        &kp RIGHT                                 &kp BSPC  &kp DEL       &lt 2 END      &lt 2 PAGE_DOWN  &kp ENTER  &lt 4 SPACE                       &kp UP                  &kp DOWN              &kp LBKT                  &kp RBKT  &mo 2
             >;
         };
 
@@ -84,11 +75,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&none  &kp F1  &kp F2       &kp F3       &kp F4       &kp F5   &tog 1                                  &mo 3  &kp F6  &kp F7  &kp F8  &kp F9  &kp F11  &none
-&none  &none   &kp LG(F12)  &kp F13      &kp F14      &kp F15  &none                                   &none  &none   &none   &none   &none   &none    &none
-&none  &none   &kp LG(F16)  &kp F16      &kp F17      &kp F18  &none   &none  &none      &none  &none  &none  &none   &none   &none   &none   &none    &none
-&none  &none   &kp LG(F15)  &kp LG(F13)  &kp LG(F14)  &kp F19                 &none      &none                &none   &none   &none   &none   &none    &none
-&none  &none   &none        &none        &none                 &none   &none  &none      &none  &none  &none          &none   &none   &none   &none    &none
+&none  &kp F1  &kp F2                 &kp F3                                 &kp F4                 &kp F5                 &tog 1                                  &mo 3  &kp F6                 &kp F7                 &kp F8                     &kp F9                   &kp F11                   &none
+&none  &none   &kp LG(LS(LA(LC(W))))  &kp LS(LA(LG(LC(RS(RA(RC(RG(E))))))))  &kp LS(LC(LG(LA(R))))  &kp LS(LA(LC(LG(T))))  &none                                   &none  &kp LS(LA(LC(LG(Y))))  &kp LS(LA(LC(LG(U))))  &kp LS(LA(LC(LG(I))))      &kp LS(LA(LC(LG(O))))    &kp LA(LC(LG(LS(P))))     &none
+&none  &none   &kp LG(LA(LC(LS(S))))  &kp LS(LA(LC(LG(D))))                  &kp LG(LC(LA(LS(F))))  &kp LS(LA(LC(LG(G))))  &none   &none  &none      &none  &none  &none  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LC(LG(LA(K))))      &kp LS(LC(LG(LA(L))))    &kp LS(LA(LC(LG(SEMI))))  &none
+&none  &none   &kp LG(LS(LA(LC(X))))  &kp LG(LA(LC(LS(C))))                  &kp LG(LS(LA(LC(V))))  &kp LS(LA(LC(LG(B))))                 &none      &none                &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(COMMA))))  &kp LS(LA(LC(LG(DOT))))  &kp LS(LA(LC(LG(FSLH))))  &none
+&none  &none   &none                  &none                                  &none                                         &none   &none  &none      &none  &none  &none                         &none                  &none                      &none                    &none                     &none
             >;
         };
 
@@ -103,22 +94,12 @@
             >;
         };
 
-        Navigation {
-            bindings = <
-&trans  &trans  &trans    &trans          &trans         &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &kp UP_ARROW    &kp LA(RIGHT)  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans          &trans         &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans          &trans                 &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         Symbols {
             bindings = <
 &none  &none         &none         &none     &none        &none          &none                                  &none  &kp LS(PLUS)   &none         &none         &none         &none     &none
 &none  &none         &kp LS(HOME)  &kp UP    &kp LS(END)  &none          &none                                  &none  &kp MINUS      &kp LS(LPAR)  &kp LS(RPAR)  &none         &none     &none
 &none  &kp LG(LEFT)  &kp LEFT      &kp DOWN  &kp RIGHT    &kp LG(RIGHT)  &none  &none  &none      &none  &none  &none  &kp LS(UNDER)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PLUS)  &kp SEMI  &none
-&none  &none         &kp PG_DN     &none     &kp PG_UP    &kp LG(RIGHT)                &none      &none                &none          &kp LS(LT)    &kp LS(GT)    &none         &none     &none
+&none  &none         &kp PG_DN     &none     &kp PG_UP    &none                        &none      &none                &none          &kp LS(LT)    &kp LS(GT)    &none         &none     &none
 &none  &none         &none         &none     &none                       &none  &none  &none      &none  &none  &none                 &none         &none         &none         &none     &none
             >;
         };
