@@ -28,10 +28,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64>;
             require-prior-idle-ms = <10>;
         };
 
@@ -41,10 +41,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64 13 27 45 59 75 12 26 44 58 74>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64 13 27 45 59 75 12 26 44 58 74 7 8 9 10 11 12 21 22 23 24 25 26 39 40 41 42 43 44 54 55 56 57 58 71 72 73>;
             require-prior-idle-ms = <10>;
         };
     };
@@ -55,11 +55,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                             &mo 3        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                              &none        &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LEFT_GUI  &kp LALT       &kp RIGHT_ALT    &kp RCTRL  &none        &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                           &kp HOME       &kp PG_UP                                &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp TAB       &lt 2 END      &lt 2 PAGE_DOWN  &kp ENTER  &lt 4 SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2                  &kp N3          &mt LS(LG(NUMBER_4)) NUMBER_4  &kp N5  &tog 1                                                             &mo 3        &kp N6  &kp N7                  &kp N8                &kp N9                  &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W                   &kp E           &kp R                          &kp T   &none                                                              &none        &kp Y   &kp U                   &kp I                 &kp O                   &kp P     &kp BSLH
+&kp ESC    &kp A      &thleft LEFT_CONTROL S  &thleft LGUI D  &thleft LEFT_SHIFT F           &kp G   &none     &kp LEFT_GUI  &kp LALT       &kp RIGHT_ALT    &kp RCTRL  &none        &kp H   &thright RIGHT_SHIFT J  &thright RIGHT_GUI K  &thright RIGHT_SHIFT L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X                   &kp C           &kp V                          &kp B                           &kp HOME       &kp PG_UP                                &kp N   &kp M                   &kp COMMA             &kp DOT                 &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS                &kp LEFT        &kp RIGHT                              &kp BSPC  &kp TAB       &lt 2 END      &lt 5 PAGE_DOWN  &kp ENTER  &lt 4 SPACE          &kp UP                  &kp DOWN              &kp LBKT                &kp RBKT  &mo 2
             >;
         };
 
@@ -98,11 +98,21 @@
 
         Symbols {
             bindings = <
-&none  &none         &none         &none     &none        &none          &none                                  &none  &kp LS(PLUS)   &none             &none              &none         &none     &none
-&none  &none         &kp LS(HOME)  &kp UP    &kp LS(END)  &none          &none                                  &none  &kp MINUS      &kp LS(LPAR)      &kp LS(RPAR)       &none         &none     &none
-&none  &kp LG(LEFT)  &kp LEFT      &kp DOWN  &kp RIGHT    &kp LG(RIGHT)  &none  &none  &none      &none  &none  &none  &kp LS(UNDER)  &kp LS(LBRC)      &kp LS(RBRC)       &kp LS(PLUS)  &kp SEMI  &none
-&none  &none         &kp PG_DN     &none     &kp PG_UP    &none                        &none      &none                &kp COMMA      &kp LS(LT)        &kp LS(GT)         &kp PERIOD    &none     &none
-&none  &none         &none         &none     &none                       &none  &none  &none      &none  &none  &none                 &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none         &none     &none
+&none  &none         &none         &none     &none        &none          &none                                  &none  &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)         &none          &none             &none
+&none  &none         &kp LS(HOME)  &kp UP    &kp LS(END)  &none          &none                                  &none  &kp MINUS         &kp LS(LPAR)      &kp LS(RPAR)       &kp LS(EQUAL)  &kp LS(NUMBER_1)  &none
+&none  &kp LG(LEFT)  &kp LEFT      &kp DOWN  &kp RIGHT    &kp LG(RIGHT)  &none  &none  &none      &none  &none  &none  &kp LS(UNDER)     &kp LS(LBRC)      &kp LS(RBRC)       &kp EQUAL      &kp SEMI          &none
+&none  &none         &kp PG_DN     &none     &kp PG_UP    &none                        &none      &none                &kp COMMA         &kp LS(LT)        &kp LS(GT)         &kp PERIOD     &none             &none
+&none  &none         &none         &none     &none                       &none  &none  &none      &none  &none  &none                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none          &none             &none
+            >;
+        };
+
+        Coding {
+            bindings = <
+&none  &none    &none        &none  &none              &none   &none                                                 &none          &none  &none                 &none                  &none              &none  &none
+&none  &none    &none        &none  &kp LC(F5)         &kp F5  &none                                                 &none          &none  &none                 &none                  &none              &none  &none
+&none  &kp F12  &kp LG(F12)  &none  &kp LA(LS(F))      &none   &none       &none    &none      &none  &none          &none          &none  &none                 &none                  &none              &none  &none
+&none  &none    &none        &none  &none              &none                        &none      &none                                &none  &none                 &none                  &none              &none  &none
+&none  &none    &none        &none  &kp LS(LA(LG(B)))          &kp ESCAPE  &kp TAB  &none      &none  &kp LA(ENTER)  &kp LC(SPACE)         &kp LA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &kp RA(BACKSLASH)  &none  &none
             >;
         };
     };
