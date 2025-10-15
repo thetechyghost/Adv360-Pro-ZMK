@@ -55,11 +55,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2                  &kp N3          &mt LS(LG(NUMBER_4)) NUMBER_4  &kp N5  &tog 1                                                             &mo 3        &kp N6  &kp N7                  &kp N8                &kp N9                  &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W                   &kp E           &kp R                          &kp T   &none                                                              &none        &kp Y   &kp U                   &kp I                 &kp O                   &kp P     &kp BSLH
-&kp ESC    &kp A      &thleft LEFT_CONTROL S  &thleft LGUI D  &thleft LEFT_SHIFT F           &kp G   &none     &kp LEFT_GUI  &kp LALT       &kp RIGHT_ALT    &kp RCTRL  &none        &kp H   &thright RIGHT_SHIFT J  &thright RIGHT_GUI K  &thright RIGHT_SHIFT L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X                   &kp C           &kp V                          &kp B                           &kp HOME       &kp PG_UP                                &kp N   &kp M                   &kp COMMA             &kp DOT                 &kp FSLH  &kp RSHFT
-&mo 5      &kp GRAVE  &kp CAPS                &kp LEFT        &kp RIGHT                              &kp BSPC  &kp TAB       &lt 2 END      &lt 2 PAGE_DOWN  &kp ENTER  &lt 4 SPACE          &kp UP                  &kp DOWN              &kp LBKT                &kp RBKT  &mo 5
+&kp EQUAL  &kp N1     &kp N2                  &kp N3          &mt LS(LG(NUMBER_4)) NUMBER_4  &kp N5  &tog 1                                                             &mo 3        &kp N6  &kp N7                  &kp N8                &kp N9            &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W                   &kp E           &kp R                          &kp T   &none                                                              &none        &kp Y   &kp U                   &kp I                 &kp O             &kp P     &kp BSLH
+&kp ESC    &kp A      &thleft LEFT_CONTROL S  &thleft LGUI D  &thleft LEFT_SHIFT F           &kp G   &none     &kp LEFT_GUI  &kp LALT       &kp RIGHT_ALT    &kp RCTRL  &none        &kp H   &thright RIGHT_SHIFT J  &thright RIGHT_GUI K  &thright RCTRL L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X                   &kp C           &kp V                          &kp B                           &kp HOME       &kp PG_UP                                &kp N   &kp M                   &kp COMMA             &kp DOT           &kp FSLH  &kp RSHFT
+&mo 5      &kp GRAVE  &kp CAPS                &kp LEFT        &kp RIGHT                              &kp BSPC  &kp TAB       &lt 2 END      &lt 2 PAGE_DOWN  &kp ENTER  &lt 4 SPACE          &kp UP                  &kp DOWN              &kp LBKT          &kp RBKT  &mo 5
             >;
         };
 
@@ -108,11 +108,11 @@
 
         Coding {
             bindings = <
-&none  &none    &none        &none  &none              &none   &none                                                 &none          &none  &none                 &none                  &none              &none  &none
-&none  &none    &none        &none  &kp LC(F5)         &kp F5  &none                                                 &none          &none  &none                 &none                  &none              &none  &none
-&none  &kp F12  &kp LG(F12)  &none  &kp LA(LS(F))      &none   &none       &none    &none      &none  &none          &none          &none  &none                 &none                  &none              &none  &none
-&none  &none    &none        &none  &none              &none                        &none      &none                                &none  &none                 &none                  &none              &none  &none
-&none  &none    &none        &none  &kp LS(LA(LG(B)))          &kp ESCAPE  &kp TAB  &none      &none  &kp LA(ENTER)  &kp LC(SPACE)         &kp LA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &kp RA(BACKSLASH)  &none  &none
+&none  &none  &none        &none    &none              &none   &none                                                 &none          &none  &none                 &none                  &none              &none  &none
+&none  &none  &none        &none    &kp LC(F5)         &kp F5  &none                                                 &none          &none  &none                 &none                  &none              &none  &none
+&none  &none  &kp LG(F12)  &kp F12  &kp LA(LS(F))      &none   &none       &none    &none      &none  &none          &none          &none  &none                 &none                  &none              &none  &none
+&none  &none  &none        &none    &none              &none                        &none      &none                                &none  &none                 &none                  &none              &none  &none
+&none  &none  &none        &none    &kp LS(LA(LG(B)))          &kp ESCAPE  &kp TAB  &none      &none  &kp LA(ENTER)  &kp LC(SPACE)         &kp LA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &kp RA(BACKSLASH)  &none  &none
             >;
         };
     };
